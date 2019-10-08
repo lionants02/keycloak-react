@@ -1,0 +1,9 @@
+{
+  "clientId": "nirun-client",
+  "realm": "nirun",
+  "auth-server-url": "https://auth.hii.web.meca.in.th/auth",
+  "ssl-required": "external",
+  "resource": "nirun-client",
+  "public-client": true,
+  "confidential-port": 0
+}
