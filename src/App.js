@@ -1,19 +1,17 @@
 import React from 'react';
-import {BrowserRouter, Link, Route} from 'react-router-dom';
-import Welcome from './Welcome';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Secured from './Secured';
+import UserInfo from "./UserInfo";
 import './App.css';
 
 function App() {
     return (
         <BrowserRouter>
             <div className="container">
-                <ul>
-                    <li><Link to="/">public component</Link></li>
-                    <li><Link to="/secured">secured component</Link></li>
-                </ul>
                 <Route exact path="/" component={Secured}/>
-                <Route path="/secured" component={Welcome}/>
+            </div>
+            <div className="container">
+                <Route exact path="/" component={UserInfo}/>
             </div>
         </BrowserRouter>
     );

@@ -14,7 +14,7 @@ class Secured extends Component {
         return (
             <div>
                 <p>Initializing Keycloak...</p>
-                <p id="token-view">Initializing Keycloak...</p>
+                <p><code>{localStorage.getItem("react-token")}</code></p>
             </div>
         );
     }
