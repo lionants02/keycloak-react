@@ -30,7 +30,7 @@
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
-<div id="token-view">
+<div id="token-view"></div>
 <script>
     console.log("Init Keycloak header")
     var keycloak = Keycloak({
@@ -47,8 +47,15 @@
         checkLoginIframe: false,
         flow: 'implicit'
     })
-        .success(function (authenticated) {
-            console.log("Success " + authenticated);
+        .success(function (auth) {
+            if (!auth) {
+                window.location.reload();
+            } else {
+                console.info("Authenticated");
+            }
+
+            localStorage.setItem("react-token", keycloak.token);
+
             renderUserInfo()
         })
         .error(function () {
