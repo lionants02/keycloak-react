@@ -25,7 +25,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://auth.hii.web.meca.in.th/auth/js/keycloak.js"></script>
+    <script src="https://auth.hii.in.th/auth/js/keycloak.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -46,7 +47,7 @@
     var keycloak = Keycloak({
         "clientId": "nirun-client",
         "realm": "nirun",
-        "auth-server-url": "https://auth.hii.web.meca.in.th/auth",
+        "auth-server-url": "https://auth.hii.in.th/auth",
         "ssl-required": "external",
         "resource": "nirun-client",
         "public-client": true,
